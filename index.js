@@ -6,21 +6,21 @@ let numeros = []
 
 console.log("Te direi qual o maior número possível com seus números...")
 
+let numUser = prompt("Escolha um número: ");
+numUser = numUser.split("");
 
-    let numUser = prompt("Escolha um número: ")
-    
-    numUser = numUser.split("")
-    
-    for (let i = 0; i < numUser.length; i++) {
-        for (let j = 0; j < numUser.length; j++) {
+// Função para encontrar o maior número possível sem usar sort
+for (let i = 0; i < numUser.length; i++) {
+    for (let j = i + 1; j < numUser.length; j++) {
+        if (numUser[j] > numUser[i]) {
             let aux = numUser[i];
             numUser[i] = numUser[j];
             numUser[j] = aux;
-
-            if (!numeros.includes(numUser.join(""))) {
-                numeros.push(numUser.join(""));
-                console.log(numUser.join(""));
-                
-            }
         }
     }
+}
+
+let maiorNumero = numUser.join("");
+numeros.push(maiorNumero);
+
+console.log("O maior número possível é: " + maiorNumero);
