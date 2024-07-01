@@ -6,6 +6,7 @@ let numeros = []
 
 console.log("Te direi qual o maior número possível com seus números...")
 
+while (true) {
 let numUser = prompt("Escolha um número: ");
 numUser = numUser.split("");
 
@@ -23,3 +24,4 @@ let maiorNumero = numUser.join("");
 numeros.push(maiorNumero);
 
 console.log("O maior número possível é: " + maiorNumero);
+}
