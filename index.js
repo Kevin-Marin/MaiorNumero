@@ -9,7 +9,6 @@ console.log("Te direi qual o maior número possível com seus números...")
 let numUser = prompt("Escolha um número: ");
 numUser = numUser.split("");
 
-// Função para encontrar o maior número possível sem usar sort
 for (let i = 0; i < numUser.length; i++) {
     for (let j = i + 1; j < numUser.length; j++) {
         if (numUser[j] > numUser[i]) {
